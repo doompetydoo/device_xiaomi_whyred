@@ -12,6 +12,10 @@ DEVICE_PATH := device/xiaomi/whyred
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH)
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
