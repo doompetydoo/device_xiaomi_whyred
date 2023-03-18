@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_whyred.mk
+    $(LOCAL_DIR)/halcyon_whyred.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_whyred-user \
-    lineage_whyred-userdebug \
-    lineage_whyred-eng
+    halcyon_whyred-user \
+    halcyon_whyred-userdebug \
+    halcyon_whyred-eng
