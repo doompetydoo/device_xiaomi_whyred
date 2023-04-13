@@ -8,16 +8,8 @@
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib/hw/camera.sdm660.so)
-            for LIBCAMERA_SDM660_SHIM in $(grep -L "libcamera_sdm660_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libcamera_sdm660_shim.so" "$LIBCAMERA_SDM660_SHIM"
-            done
-            ;;
         vendor/lib64/libgf_ca.so)
             sed -i 's|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g' "${2}"
-            ;;
-        vendor/lib/libMiWatermark.so)
-            "${PATCHELF}" --add-needed "libmiwatermark_shim.so" "${2}"
             ;;
     esac
 }
